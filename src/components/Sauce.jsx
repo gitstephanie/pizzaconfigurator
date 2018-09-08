@@ -6,11 +6,11 @@ import {connect} from 'react-redux'
 class Sauce extends React.Component {
     constructor(props){
         super(props)
-    this.state = {
-        sauce: ''
+        this.state = {
+            sauce: ''
+        }
+        this.onChange = this.onChange.bind(this)
     }
-this.onChange = this.onChange.bind(this)
-}
 
 onChange = (event) => {
         this.props.dispatch(chooseSauce(event.target.value))
@@ -21,10 +21,10 @@ render () {
         <label>
         Pick your favorite sauce:
         <select value='sauce' onChange={this.onChange}>
-          <option type="radio">White sauce</option>
-          <option>{sauces[0].name}</option>
-          <option>{sauces[1].name} (+ {sauces[1].price} euro)</option>
-          <option>{sauces[2].name} (+ {sauces[2].price} euro)</option>
+            <option>Choose sauce</option>
+            <option value={sauces[0].id}>{sauces[0].name}</option>
+            <option value={sauces[1].id}>{sauces[1].name} (+ {sauces[1].price} euro)</option>
+            <option value={sauces[2].id}>{sauces[2].name} (+ {sauces[2].price} euro)</option>
         </select>
       </label>
     )

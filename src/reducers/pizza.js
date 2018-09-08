@@ -1,6 +1,6 @@
 import {CHOOSE_BASE, CHOOSE_SAUCE, CHOOSE_TOPPING1, CHOOSE_TOPPING2, CHOOSE_TOPPING3, CHOOSE_DELIVERY} from "../actions/pizza";
 
-const reducer = (state = null, action) => {
+const reducer = (state = {}, action = {}) => {
     switch (action.type) {
         case CHOOSE_BASE:
          return {
@@ -15,17 +15,17 @@ const reducer = (state = null, action) => {
         case CHOOSE_TOPPING1:
          return {
             ...state,
-            topping0: action.payload
+            topping1: action.payload
         }
         case CHOOSE_TOPPING2:
          return {
             ...state,
-            topping1: action.payload
+            topping2: action.payload
         }
         case CHOOSE_TOPPING3:
          return {
             ...state,
-            topping2: action.payload
+            topping3: action.payload
         }
         case CHOOSE_DELIVERY:
          return {

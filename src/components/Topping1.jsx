@@ -21,13 +21,13 @@ render () {
         <label>
         Pick your favorite topping 1:
         <select value='topping1' onChange={this.onChange}>
-	    <option>-</option>                 
-	    <option>{toppings[0].name}</option>
-	    <option>{toppings[1].name}</option>
-	    <option>{toppings[2].name}</option>
-	    <option>{toppings[3].name}</option>
-	    <option>{toppings[4].name}</option>
-	    <option>{toppings[5].name}</option>
+	    <option value='0'>-</option>                 
+	    <option value={toppings[0].id}>{toppings[0].name}</option>
+	    <option value={toppings[1].id}>{toppings[1].name}</option>
+	    <option value={toppings[2].id}>{toppings[2].name}</option>
+	    <option value={toppings[3].id}>{toppings[3].name}</option>
+	    <option value={toppings[4].id}>{toppings[4].name}</option>
+	    <option value={toppings[5].id}>{toppings[5].name}</option>
         </select>
       </label>
     )

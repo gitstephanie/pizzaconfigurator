@@ -6,47 +6,48 @@ import Topping1 from './Topping1'
 import Topping2 from './Topping2'
 import Topping3 from './Topping3'
 import Delivery from './Delivery'
-
-
+import TotalPrice from './TotalPrice'
 
 class PizzaContainer extends React.Component {
   constructor(props) {
-    super(props) 
-      this.state = {
-        base: '',
-        sauce: '',
-        topping: '', 
-        deliveryType: '',
-        price: 0,
+    super(props)
+    this.state = {
+       base: '',
+       sauce: '',
+       topping1: '',
+       topping2: '',
+       topping3: '',
+       droneDelivery: false,
+       readyToOrder: false
     }
   }
-
   render() {
-    console.log(`Base: ${this.state.base}`)
-    console.log(`Sauce: ${this.state.sauce}`)
-    console.log(`Topping: ${this.state.topping}`)
-    console.log(`Delivery: ${this.state.deliverytype}`)
+    //console.log(`Base: ${this.props.base}`)
+    //console.log(`Sauce: ${this.props.sauce}`)
+    //console.log(`Topping: ${this.props.topping}`)
+    //console.log(`Delivery: ${this.props.deliverytype}`)
     return (
-    <div>
-      <Base/>
-      <Sauce/>
-      <Topping1/>
-      <Topping2	/>
-      <Topping3/>
-      <Delivery/>
-    <p>Total price:</p> 
-    </div>
+      <div>
+        <Base/>
+        <Sauce/>
+        <Topping1/>
+        <Topping2/>
+        <Topping3/>
+        <Delivery/>
+        <TotalPrice pizza={this.props}/> 
+      </div>
     )
   }
 }
 
 function mapStateToProps (state) {
-  console.log(state.props)
   return {
-    base: state.base,
-    sauce: state.sauce,
-    topping: state.topping,
-    delivery: state.delivery
+    base: state.pizza.base,
+    sauce: state.pizza.sauce,
+    topping1: state.pizza.topping1,
+    topping2: state.pizza.topping2,
+    topping3: state.pizza.topping3,
+    delivery: state.pizza.delivery
   }
 }
 

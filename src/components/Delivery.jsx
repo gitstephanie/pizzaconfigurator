@@ -23,8 +23,9 @@ render () {
         <label>
         Delivery:
         <select value='delivery' onChange={this.onChange}>
-           <option>{deliverytype[0].name}</option>
-           <option>{deliverytype[1].name} ({deliverytype[1].percentage}% extra costs)</option>
+            <option value='0'>Choose delivery</option>
+            <option value={deliverytype[0].id}>{deliverytype[0].name}</option>
+            <option value={deliverytype[1].id}>{deliverytype[1].name} ({deliverytype[1].percentage}% extra costs)</option>
          </select>     
         </label>
     )
