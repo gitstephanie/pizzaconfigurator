@@ -21,7 +21,8 @@ render () {
         <label>
         Pick your favorite topping 1:
         <select value='topping1' onChange={this.onChange}>
-	    <option value='0'>Choose topping2</option>                 
+	    <option value='0'>Choose topping2</option>
+        <option value='0'>No topping</option>             
 	    <option value={toppings[0].id}>{toppings[0].name}</option>
 	    <option value={toppings[1].id}>{toppings[1].name}</option>
 	    <option value={toppings[2].id}>{toppings[2].name}</option>
