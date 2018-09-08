@@ -52,5 +52,15 @@
         "name": "Cherry tomatoes",
         "price": 0.5
     }
+    ],
+    "deliverytype": [
+            {"id": 1,
+            "name": "Normal delivery",
+            "percentage": 0
+        },
+            {"id": 2,
+            "name": "Turbo Drone delivery",
+            "percentage": 10
+        }
     ]
 }
