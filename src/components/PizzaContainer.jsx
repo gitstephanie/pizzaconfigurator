@@ -28,7 +28,7 @@ class PizzaContainer extends React.Component {
     //console.log(`Delivery: ${this.props.deliverytype}`)
     return (
       <div>
-        <Base/>
+        <Base currentBase={this.props.base}/>
         <Sauce/>
         <Topping1/>
         <Topping2/>

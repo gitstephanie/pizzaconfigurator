@@ -20,8 +20,8 @@ render () {
     return (
         <label>
         Pick your favorite sauce:
-        <select value='sauce' onChange={this.onChange}>
-            <option>Choose sauce</option>
+        <select value={this.props.sauce} onChange={this.onChange}>
+            <option value='-1'>Choose sauce</option>
             <option value={sauces[0].id}>{sauces[0].name}</option>
             <option value={sauces[1].id}>{sauces[1].name} (+ {sauces[1].price} euro)</option>
             <option value={sauces[2].id}>{sauces[2].name} (+ {sauces[2].price} euro)</option>

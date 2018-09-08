@@ -20,8 +20,8 @@ render () {
     return (
         <label>
         Pick your favorite topping 1:
-        <select value='topping1' onChange={this.onChange}>
-	    <option value='0'>Choose topping1</option>  
+        <select value={this.props.topping1} onChange={this.onChange}>
+	    <option value='-1'>Choose topping1</option>  
         <option value='0'>No topping</option>               
 	    <option value={toppings[0].id}>{toppings[0].name}</option>
 	    <option value={toppings[1].id}>{toppings[1].name}</option>
