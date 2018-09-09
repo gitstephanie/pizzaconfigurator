@@ -6,12 +6,9 @@ import Toppings from './Toppings'
 import Delivery from './Delivery'
 import TotalPrice from './TotalPrice'
 
+
 class PizzaContainer extends React.Component {
   render() {
-  //console.log(`Base: ${this.props.base}`)
-  //console.log(`Sauce: ${this.props.sauce}`)
-  //console.log(`Topping: ${this.props.toppings}`)
-  //console.log(`Delivery: ${this.props.delivery}`)
   return (
     <div>
       <Base/>

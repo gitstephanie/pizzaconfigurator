@@ -11,6 +11,8 @@ export default function totalPrice(props){
         tp += pizza.toppings.length * 0.5
         tp += pizza.delivery > 1 ? tp*0.1 : 0
         return <p>Total price is: {Math.round(tp * 100) / 100}</p>
-    } else {return (<p>Please pick a base first to calculate your price</p>)}
+    } else {
+        return (<p>Please pick a base first to calculate your price.</p>)
+    }
 } 
 

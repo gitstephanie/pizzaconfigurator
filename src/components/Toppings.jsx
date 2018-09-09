@@ -16,7 +16,7 @@ onChange = (event) => {
 render () {
     return (
         <div>
-            Pick your favorite toppings:
+            Pick your favorite toppings (max 3):
             <form>
                 <input onChange={this.onChange} type="checkbox" value={toppings[0].id} checked={this.props.toppings.includes("1")} /> {toppings[0].name}<br/>
                 <input onChange={this.onChange} type="checkbox" value={toppings[1].id} checked={this.props.toppings.includes("2")} /> {toppings[1].name}<br/>

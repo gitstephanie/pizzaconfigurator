@@ -11,7 +11,7 @@ onChange = (event) => {
 
 render () {
     return (
-        <label>
+        <div>
         Pick your favorite sauce:
         <select value={this.props.sauce} onChange={this.onChange}>
             <option value='-1'>Choose sauce</option>
@@ -21,7 +21,7 @@ render () {
                 )
             }
         </select>
-      </label>
+      </div>
     )
 }
 }
@@ -31,5 +31,6 @@ const mapStateToProps = (state) => {
         state
     }
 } 
+
 
 export default connect (mapStateToProps)(Sauce);

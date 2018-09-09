@@ -1,13 +1,13 @@
 import {CHOOSE_BASE, CHOOSE_SAUCE, CHOOSE_TOPPINGS, CHOOSE_DELIVERY} from "../actions/pizza";
 
-const initState = {
+const initialState = {
     base: '',
     sauce: '',
     toppings: [],
     delivery: 0
 }
 
-const reducer = (state = initState, action = {}) => {
+const reducer = (state = initialState, action = {}) => {
     switch (action.type) {
         case CHOOSE_BASE:
          return {

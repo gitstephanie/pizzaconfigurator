@@ -14,10 +14,10 @@ class Delivery extends React.Component {
             <label>
                 Delivery:
                 <select value={this.props.delivery} onChange={this.onChange}>
-                    <option value='-1'>Choose delivery</option>
+                    <option value='-1'>Choose deliverytype</option>
                     {
                         deliverytype.map(
-                            d => <option key={d.id} value={d.id}>{d.name}</option>
+                            d => <option key={d.id} value={d.id}>{d.name} {d.percentage > 0 ? `(${d.percentage} % extra)` : ""}</option>
                         )
                     }
                 </select>     
