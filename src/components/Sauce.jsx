@@ -4,13 +4,6 @@ import {sauces} from '../pizza.json'
 import {connect} from 'react-redux'
 
 class Sauce extends React.Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            sauce: ''
-        }
-        this.onChange = this.onChange.bind(this)
-    }
 
 onChange = (event) => {
         this.props.dispatch(chooseSauce(event.target.value))
@@ -22,9 +15,11 @@ render () {
         Pick your favorite sauce:
         <select value={this.props.sauce} onChange={this.onChange}>
             <option value='-1'>Choose sauce</option>
-            <option value={sauces[0].id}>{sauces[0].name}</option>
-            <option value={sauces[1].id}>{sauces[1].name} (+ {sauces[1].price} euro)</option>
-            <option value={sauces[2].id}>{sauces[2].name} (+ {sauces[2].price} euro)</option>
+            {
+                sauces.map(
+                    s => <option key={s.id} value={s.id}>{s.name} {s.price > 0 ? `(${s.price} euro extra)` : ""}</option>
+                )
+            }
         </select>
       </label>
     )

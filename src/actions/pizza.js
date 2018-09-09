@@ -1,8 +1,6 @@
 export const CHOOSE_BASE = 'CHOOSE_BASE'
 export const CHOOSE_SAUCE = 'CHOOSE_SAUCE'
-export const CHOOSE_TOPPING1 = 'CHOOSE_TOPPING1'
-export const CHOOSE_TOPPING2 = 'CHOOSE_TOPPING2'
-export const CHOOSE_TOPPING3 = 'CHOOSE_TOPPING3'
+export const CHOOSE_TOPPINGS = 'CHOOSE_TOPPINGS'
 export const CHOOSE_DELIVERY = 'CHOOSE_DELIVERY'
 
 export const chooseBase = (base) => {
@@ -21,26 +19,10 @@ export const chooseSauce = (sauce) => {
   }
 }
 
-export const chooseTopping1 = (topping) => {
-  console.log(`topping1 in actions ${topping}`)
+export const chooseToppings = (topping) => {
+  console.log(`toppings in actions ${topping}`)
   return {
-    type: 'CHOOSE_TOPPING1',
-    payload: topping
-  }
-}
-
-export const chooseTopping2 = (topping) => {
-  console.log(`topping2 in actions ${topping}`)
-  return {
-    type: 'CHOOSE_TOPPING2',
-    payload: topping
-  }
-}
-
-export const chooseTopping3 = (topping) => {
-  console.log(`topping3 in actions ${topping}`)
-  return {
-    type: 'CHOOSE_TOPPING3',
+    type: 'CHOOSE_TOPPINGS',
     payload: topping
   }
 }
