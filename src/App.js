@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import store from './store'
 import {Provider} from 'react-redux'
-import { Route } from 'react-router-dom'
+import { Route, BrowserRouter as Router } from 'react-router-dom'
 import Home from './components/Home'
 
 class App extends Component {
@@ -9,7 +9,9 @@ class App extends Component {
     return (
       <Provider store={store}>
         <div>
-          <Route path="/" exact component={Home} />
+        <Router basename={'/pizzahomework'}>
+          <Route path={`${process.env.PUBLIC_URL}/`} exact component={Home} />
+        </Router>
         </div>
       </Provider>
     );
